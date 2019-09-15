@@ -1,0 +1,165 @@
+/* accessibility *//* menu links accesskeys */span.accesskey {text-decoration: none;}/* accessibility divs are hidden by default, text, screenreaders and such will show these */.accessibility, hr {/* position set so the rest can be set out side of visual browser viewport */position: absolute;/* takes it out top side */top: -999em;/* takes it out left side */left: -999em;}/* definition tags are also hidden, these are also used for accessibility menu links */dfn {position: absolute;left: -1000px;top: -1000px;width: 0;height: 0;overflow: hidden;display: inline;}/* end accessibility *//* wiki style external links *//* external links will have "(external link)" text added, lets hide it */a.external span {position: absolute;left: -5000px;width: 4000px;}a.external {/* make some room for the image, css shorthand rules, read: first top padding 0 then right padding 12px then bottom then right */padding: 0 12px 0 0;}/* colors for external links */a.external:link {color: #18507C;/* background image for the link to show wiki style arrow */background: url(http://www.themetalshop.com.au/uploads/NCleanBlue/external.gif) no-repeat 100% -100px;}a.external:visited {color: #18507C;/* a different color can be used for visited external links *//* Set the last 0 to -100px to use that part of the external.gif image for different color for active links external.gif is actually 300px tall, we can use different positions of the image to simulate rollover image changes.*/background: url(http://www.themetalshop.com.au/uploads/NCleanBlue/external.gif) no-repeat 100% -100px;}a.external:hover {color: #18507C;/* Set the last 0 to -200px to use that part of the external.gif image for different color on hover */background: url(http://www.themetalshop.com.au/uploads/NCleanBlue/external.gif) no-repeat 100% 0;background-color: inherit;}/* end wiki style external links *//* clearing *//* clearfix is a hack for divs that hold floated elements. it will force the holding div to span all the way down to last floated item. We strongly recommend against using this as it is a hack and might not render correctly but it is included here for convenience. Do not edit if you dont know what you are doing*/.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}.clear {height: 0;clear: both;width: 90%;visibility: hidden;}#main .clear {height: 0;clear: right;width: 90%;visibility: hidden;}* html>body .clearfix {display: inline-block;width: 100%;}* html .clear {/* Hides from IE-mac \*/height: 1%;clear: right;width: 90%;/* End hide from IE-mac */}/* end clearing */
+/* Stylesheet: Accessibility and cross-browser tools Modified On 2009-05-13 10:42:54 */
+/* reset.css */
+html {margin:0; padding:0; border:0;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0; padding:0; border:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit; vertical-align:baseline;}
+article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
+body {line-height:1.5; background:white;}
+.hr {width:100%; border-bottom:dotted 1px #e7b5da; padding:0 0 20px 0;}
+table, th, td {vertical-align:top;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+:focus {outline:0;}
+body {font:13px/1.5em 'Open Sans', Arial, Helvetica, sans-serif; background:#c4c2c3;}
+em {font-style:italic;}
+
+
+#holder {width:960px; margin:0 auto; padding:0px; background:#fff;}
+#header {width:960px; height:160px; position:relative; background: url(/images/bg_header.jpg) no-repeat right top;}
+#logo {position:absolute; top:12px; left:20px;}
+#moto {position:absolute; top:60px; right:50px;}
+
+#mainNav {width:960px; padding:0; background:#0054a6; border-bottom:1px solid #fff;}
+#banner {width:960px; margin:0 auto; overflow:hidden; position:relative; background:url(/images/bg_banner-bottom.jpg) repeat-x bottom; padding-bottom:11px;}
+
+#content {width:100%; margin:0 auto; display:table;}
+p {padding:7px 0;}
+h1, h2, h3, h4 {color:#000; line-height:1.5em; text-transform:uppercase; }
+h1 {margin:10px 0;	padding:0; font-size:22px; font-weight:bold;}
+h2 {margin:10px 0 5px 0; padding:0; font-size:18px;}
+h3 {margin:10px 0 5px 0; padding:0; font-size:16px;}
+h4 {margin:10px 0 5px 0;	padding:0; font-size:14px;}
+
+#content a:link, #content a:active, #content a:visited {color:#0054a6; text-decoration:none;}
+#content a:hover {text-decoration:underline;}
+#content ul, #content ol {padding:0 0 3px 0; list-style:none; }
+#content li {padding-left:22px; line-height:20px; color:#000; background: url(/images/dot.png) no-repeat 0 4px;}
+
+div#col-1 {margin:0 auto; padding:0; width:960px; clear:both;}
+div#col-2{margin:0; display:block; padding:10px 40px 30px 40px; float:left; position:relative; width:880px; color:#000; min-height:150px;}
+#main1, #main2{width:265px; float:left; border-right:1px dotted #000; padding-right:20px; margin-right:20px;}
+#main3 {width:265px; float:left;}
+
+#footerHolder {width:960px; margin:0 auto; background:#0054a6; min-height:70px; border-top:2px solid #404040;}
+#footer {width:920px; margin:0 auto; color:#fff; clear:both; display:table; padding:10px 0 5px 0;}
+#footerTxt {
+    width:650px;
+    margin:5px 0 7px 5px;
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	line-height:normal;
+	display:block;
+	float:left;
+	clear:left;
+}
+#footer a, #footer a:link, #footer a:active, #footer a:visited {color:#fff; text-decoration:none;}
+#footer a:hover {color:#aaa;}
+#social {display:block; float:right; line-height:33px; padding:10px 10px 10px 10px;}
+#social img {margin-left:10px;}
+
+
+.cms_submit {width:100px !important; border:1px solid #0054a6; background:#0054a6; color:#fff; cursor:pointer;}
+
+.contactform  input[type=text] {width: 230px; border:1px solid #0054a6; background:#eee;}
+#message {width: 230px; border:1px solid #0054a6; background:#eee;}
+.contactform #m62b34fbrp_captcha_phrase {width: 80px;}
+
+/* Stylesheet: theme Modified On 2013-04-30 11:26:05 */
+/* Horizontal menu for the CMS CSS Menu Module */
+#menu_vert {margin-left:1px; margin-right:1px;}
+/* The wrapper clears the floating elements of the menu */
+
+/* Fix for Opera 8 */
+.clearb {clear:both;}
+#menuwrapper {width:100%;}
+
+#primary-nav, #primary-nav ul {margin:0px; list-style:none;}
+#primary-nav {margin:0;}
+#primary-nav ul {margin:0; position:absolute; top:auto; display:none; z-index:1000;}
+#primary-nav li {float:left; margin:0;}
+#primary-nav a, #primary-nav a:link,#primary-nav a:visited {
+	padding:12px 30px;
+	text-align:center;
+	color:#fff;
+	font-size:14px;
+	font-weight:none;
+	line-height:17px;
+	display:block;
+	text-decoration:none;
+	text-align:center;
+}
+
+#primary-nav a:active{color:#000; background:#0054a6;}
+#primary-nav li:hover > a {color:#000; background:#0054a6;}
+#primary-nav li a.menuactive, #primary-nav li.menuactive {color:#fff; background:#ed1c24;}
+#primary-nav li:hover, #primary-nav li.menuh, #primary-nav li.menuparenth, #primary-nav li.menuactive {color:#fff; background:#ed1c24;}
+
+#primary-nav ul ul {margin-top:1px; left:100%; top:0px;}
+#primary-nav li li {width: 160px; margin:0; float:none; position:relative; text-align:left; border:0; margin-left:0px; border:0;}
+#primary-nav li li:first-child {border-top:1px solid #fff;}
+#primary-nav li li a, #primary-nav li li a:link, #primary-nav li li a:active, #primary-nav li li a:visited {
+	padding:6px 20px;
+	background:#ed1c24;
+	font-size:13px;
+	color:#fff;
+	text-transform:none;
+	border-left:0px solid #305b2f;
+	border-right:0px solid #305b2f;
+	border-bottom:1px solid #fff;
+	width:auto;
+	text-align:left;
+	border-top:0;
+}
+#primary-nav li li a:hover {color:#fff; background:#0054a6;}
+#primary-nav ul li.menuparenth, #primary-nav ul li.menuparent:hover, #primary-nav ul li.menuparenth {background-position:center right; background-repeat:no-repeat;}
+#primary-nav ul, #primary-nav li:hover ul, #primary-nav li:hover ul ul, #primary-nav li.menuparenth ul, #primary-nav li.menuparenth ul ul {color:#fff; background:#0054a6;}
+#primary-nav li:hover ul, #primary-nav ul li:hover ul, #primary-nav ul ul li:hover ul, #primary-nav li.menuparenth ul, #primary-nav ul li.menuparenth ul, #primary-nav ul ul li.menuparenth ul {display:block;}
+/* IE Hacks */
+#primary-nav li li {float:left; clear:both;}
+#primary-nav li li a {height:1%;}
+
+
+
+
+/********************
+Footer Links
+*********************/
+
+/* hack for Internet Explorer */
+* html div#footerNav {
+	/* hide ie/mac \*/
+   height:1%;/* end hide */
+}
+/* 
+background-color for the entire menu row, 
+covering 100% of the width and text center-aligned 
+*/
+div#footerNav {float:left;}
+/* 
+the menu ul box has top and left border, 
+right border is provided by the li elements 
+*/
+div#footerNav ul {margin-right:13px; padding-left:7px;}
+div#footerNav li {
+	margin-top:10px;
+	margin-right:10px;
+	padding-right:10px;
+	border-right:1px solid #fff;
+	float:left; /* makes the list horizontal */
+	list-style:none; /* hides the list bullet */	
+	color:#fff;
+	line-height:1.0em;
+}
+/* the links, that is each list item */
+div#footerNav a:link, div#footerNav a:active, div#footerNav a:visited {
+	font-size:12px;
+	color:#fff;
+	font-weight:none;
+	text-decoration:none;
+	display:block; /* IE has problems with this, fixed above */
+}
+/* hover state for links */
+div#footerNav li a:hover {color:#aaa;}
+/* Stylesheet: menu Modified On 2013-04-30 10:42:26 */
